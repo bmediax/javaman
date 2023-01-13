@@ -1,8 +1,6 @@
 import Head from "next/head";
-import { Inter } from "@next/font/google";
+// import { Inter } from "@next/font/google";
 // import styles from "@/styles/Home.module.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const mainStyles = {
@@ -13,7 +11,6 @@ export default function Home() {
     textAlign: "center",
     letterSpacing: "1px",
     fontSize: "clamp(1.2rem, 4vw, 1.8rem)",
-    fontFamily: inter,
   };
   return (
     <>
@@ -23,7 +20,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main style={mainStyles}>
+      <main style={mainStyles as React.CSSProperties}>
         <h3>Java Man</h3>
         <h1>Coming Soon</h1>
       </main>
